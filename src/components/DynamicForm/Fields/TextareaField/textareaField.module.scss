@@ -1,0 +1,57 @@
+@import "/src/styles/colors.scss";
+
+$field-height: 2.5rem;
+$border-line: 1.5px;
+$border-radius: 0.5rem;
+
+.textarea {
+  border-radius: $border-radius;
+  height: $field-height;
+  padding-top: 0.6rem;
+  padding-left: 1rem;
+  padding-right: $field-height;
+
+  width: 100%;
+  resize: none;
+
+  outline: none;
+
+  &:focus {
+    &.error {
+      outline: none;
+      border: $border-line solid $danger-color;
+    }
+  }
+}
+
+.light {
+  background-color: $white;
+  color: $dark-grey;
+  border: $border-line solid $light-grey;
+
+  &::placeholder {
+    color: $grey;
+  }
+
+  &:focus {
+    border: $border-line solid $sky-blue;
+  }
+}
+
+.dark {
+  background-color: $dark-grey;
+  color: $blueish;
+  border: $border-line solid $grey;
+
+  &::placeholder {
+    color: $dark-grey;
+  }
+
+  &:focus {
+    border: $border-line solid $light-sea-green;
+  }
+}
+
+.error {
+  border: $border-line solid $danger-color;
+}

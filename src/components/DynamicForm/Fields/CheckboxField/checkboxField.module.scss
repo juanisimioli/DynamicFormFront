@@ -1,0 +1,75 @@
+@import "/src/styles/colors.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+.lineCheckbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text {
+  margin-left: 14px;
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.checkbox {
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 2px;
+
+    border: solid 1px $grey;
+  }
+
+  input[type="checkbox"]:checked::before {
+    position: absolute;
+    content: "\2713";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    top: -1px;
+    left: -1px;
+    border-radius: 2px;
+
+    color: $white;
+  }
+}
+
+.light {
+  input[type="checkbox"]:checked::before {
+    background-color: $sky-blue;
+  }
+}
+
+.dark {
+  input[type="checkbox"]:checked::before {
+    background-color: $light-sea-green;
+  }
+
+  .text {
+    color: $grey;
+  }
+}

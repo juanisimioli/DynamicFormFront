@@ -1,0 +1,60 @@
+@import "/src/styles/colors.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.upload {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 2px;
+}
+
+.label {
+  align-self: flex-start;
+  cursor: pointer;
+  width: 170px;
+  height: 42px;
+  border-radius: 2px;
+
+  font-size: 18px;
+
+  input[type="file"] {
+    display: none;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  margin-left: 15px;
+  font-size: 16px;
+}
+
+.light {
+  .text {
+    color: $black;
+  }
+
+  .label {
+    border: solid 3px $sky-blue;
+    color: $sky-blue;
+  }
+}
+
+.dark {
+  .text {
+    color: $grey;
+  }
+  .label {
+    border: solid 3px $light-sea-green;
+    color: $light-sea-green;
+  }
+}

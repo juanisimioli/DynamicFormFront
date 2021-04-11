@@ -1,0 +1,38 @@
+@import "/src/styles/colors.scss";
+
+$field-height: 2.5rem;
+$border-line: 1.5px;
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.circleError {
+  $circle-diam: 1.25rem;
+
+  width: $circle-diam;
+  height: $circle-diam;
+  border-radius: 100%;
+  position: absolute;
+
+  margin-right: calc(#{$field-height} / 3);
+  margin-bottom: calc((#{$field-height} - #{$circle-diam}) / 2);
+
+  font-weight: bold;
+
+  color: $danger-color;
+  border: $border-line solid $danger-color;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:after {
+    content: "\274c";
+    font-size: 0.2rem;
+    filter: invert(37%) sepia(68%) saturate(6069%) hue-rotate(345deg)
+      brightness(101%) contrast(99%);
+  }
+}

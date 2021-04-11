@@ -1,0 +1,23 @@
+@import "/src/styles/colors.scss";
+
+@mixin container {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  margin: 1rem auto;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin-bottom: 6rem;
+}
+
+.light {
+  @include container();
+  background-color: $blueish;
+  box-shadow: 0 1px 6px rgb(32 33 76 / 20%);
+}
+
+.dark {
+  @include container();
+  background-color: $black;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 78%);
+}

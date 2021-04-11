@@ -1,0 +1,39 @@
+@import "/src/styles/colors.scss";
+
+.button {
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+
+  margin: 1rem 0;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+
+  transition: all 550ms ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-position: center right;
+  }
+}
+
+.disabled {
+  background-color: $grey;
+  color: $dark-grey;
+}
+
+.light {
+  color: $white;
+  background-color: $sky-blue;
+  font-weight: 600;
+}
+
+.dark {
+  color: $white;
+  background-color: $light-sea-green;
+  font-weight: 600;
+}

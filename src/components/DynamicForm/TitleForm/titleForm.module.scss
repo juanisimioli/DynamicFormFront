@@ -1,0 +1,10 @@
+@import "/src/styles/colors.scss";
+.light {
+  color: $black;
+  font-weight: 600;
+}
+
+.dark {
+  color: $light-grey;
+  font-weight: 600;
+}
