@@ -1,4 +1,5 @@
 import DynamicForm from "./components/DynamicForm/DynamicForm";
+import Intro from "./components/Intro/Intro";
 
 import { fieldsForm1, fieldsForm2 } from "./data/fieldsForm";
 
@@ -11,23 +12,26 @@ function App() {
     console.log("form submitted successfully");
   };
   return (
-    <section>
-      <DynamicForm
-        fields={fieldsForm1}
-        onSuccessSubmit={onSuccessSubmit}
-        theme="light"
-        titleForm="Example Form Light Theme"
-        titleSubmitButton="Send"
-      />
+    <>
+      <Intro />
+      <section>
+        <DynamicForm
+          fields={fieldsForm1}
+          onSuccessSubmit={onSuccessSubmit}
+          theme="light"
+          titleForm="Example Form Light Theme"
+          titleSubmitButton="Send"
+        />
 
-      <DynamicForm
-        fields={fieldsForm2}
-        onSuccessSubmit={onSuccessSubmit}
-        theme="dark"
-        titleForm="Example Form Dark Theme"
-        titleSubmitButton="Submit"
-      />
-    </section>
+        <DynamicForm
+          fields={fieldsForm2}
+          onSuccessSubmit={onSuccessSubmit}
+          theme="dark"
+          titleForm="Example Form Dark Theme"
+          titleSubmitButton="Submit"
+        />
+      </section>
+    </>
   );
 }
 
