@@ -10,19 +10,30 @@
 
 .upload {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-end;
   margin-bottom: 2px;
+
+  @media (min-width: "600px") {
+    flex-direction: row;
+  }
 }
 
 .label {
   align-self: flex-start;
   cursor: pointer;
   width: 170px;
-  height: 42px;
+  height: 52px;
   border-radius: 2px;
+  text-align: center;
 
-  font-size: 18px;
+  padding: 0 5px;
+  font-size: 15px;
+
+  @media (min-width: "768px") {
+    font-size: 18px;
+    height: 42px;
+  }
 
   input[type="file"] {
     display: none;
@@ -34,8 +45,12 @@
 }
 
 .text {
-  margin-left: 15px;
+  margin-left: 5px;
   font-size: 16px;
+
+  @media (min-width: "768px") {
+    margin-left: 15px;
+  }
 }
 
 .light {

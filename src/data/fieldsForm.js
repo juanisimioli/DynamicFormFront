@@ -60,16 +60,6 @@ export const fieldsForm1 = [
     text: "Before applying accept our Terms",
     type: "checkbox",
   },
-  {
-    id: uuidv4(),
-    type: "file",
-    accept: ".pdf, .doc, docx",
-    text: "Upload File",
-    label: "File",
-    slug: "upload-file",
-    description: "Only .pdf, .doc and .docx are allowed. Max file size 5MB.",
-    isRequired: true,
-  },
 ];
 
 export const fieldsForm2 = [
