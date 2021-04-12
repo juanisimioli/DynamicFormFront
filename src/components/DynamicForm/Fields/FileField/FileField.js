@@ -24,6 +24,10 @@ const FileField = ({ item }) => {
     const newPayload = [...state[item.slug]];
     newPayload.splice(index, 1);
     dispatch({ type: `UPDATE`, payload: { [item.slug]: [...newPayload] } });
+
+    Array.from(
+      document.querySelectorAll(`input[idinput="${item.id}"]`)
+    ).forEach((input) => (input.value = ""));
   };
 
   const textError = errorMessage(item, state);
@@ -36,6 +40,8 @@ const FileField = ({ item }) => {
             type="file"
             accept={accept}
             onChange={(e) => handleChange(e)}
+            idform={state.idForm}
+            idinput={item.id}
           />
           {text}
         </label>

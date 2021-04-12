@@ -3,11 +3,19 @@
 @mixin container {
   display: flex;
   flex-direction: column;
-  width: 60vw;
+  width: 90vw;
   margin: 1rem auto;
   padding: 1rem 2rem;
   border-radius: 1rem;
   margin-bottom: 6rem;
+
+  @media (min-width: "768px") {
+    width: 80vw;
+  }
+
+  @media (min-width: "1200px") {
+    width: 60vw;
+  }
 }
 
 .light {

@@ -22,7 +22,7 @@ export const fieldsForm1 = [
   {
     id: uuidv4(),
     isHalfSizeOnDektop: true,
-    isRequired: false,
+    isRequired: true,
     label: "Company",
     placeholder: "Company",
     slug: "company",
