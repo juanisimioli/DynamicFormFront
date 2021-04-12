@@ -3,9 +3,9 @@
 @mixin container {
   display: flex;
   flex-direction: column;
-  width: 98vw;
+  width: 100vw;
   margin: 1rem auto;
-  padding: 1rem 1rem;
+  padding: 1rem 1.2rem;
   border-radius: 1rem;
   margin-bottom: 6rem;
 

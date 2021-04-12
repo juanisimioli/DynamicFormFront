@@ -5,13 +5,14 @@ const Intro = () => {
     <header className={style.intro}>
       <h1>DYNAMIC FORM</h1>
       <p>
-        DynamicForm is a component that receives an array of fields, and
-        generates automatically a complete and functional form. Made with React
-        JS and hooks like useReducer and useContext to manage a global state for
-        each form. Backend is an AWS Lambda function made with Node JS that
-        receives the formData and sends it through an email (uses with
-        NodeMailer). You can choose a theme between 'light' or 'dark'. Front End
-        React App was deployed to AWS Amplify.
+        DynamicForm is a component that receives an array of fields and
+        generates automatically a complete and functional form. <br />
+        Made with React JS and hooks like useReducer and useContext to manage a
+        global state for each form. <br />
+        Backend is an AWS Lambda function made with Node JS that receives the
+        formData and sends it through an email (NodeMailer). <br />
+        You can choose a theme between 'light' or 'dark'. Front End React App
+        was deployed to AWS Amplify.
       </p>
       <p>
         Here you can see Front End code:{" "}
