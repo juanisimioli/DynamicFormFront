@@ -22,10 +22,7 @@ const SelectField = ({ item, error }) => {
 
   const customStyles = assignStyle(state.theme, error);
 
-  const [isComponentMounted, setIsComponentMounted] = useState(false);
-  useEffect(() => setIsComponentMounted(true), []);
-
-  return isComponentMounted ? (
+  return (
     <Select
       className="selectForm"
       onBlur={() => dispatch({ type: "ADD_DIRTY_FIELD", payload: item.slug })}
@@ -45,7 +42,7 @@ const SelectField = ({ item, error }) => {
         value: state[item.slug]?.value ?? null,
       }}
     />
-  ) : null;
+  );
 };
 export default SelectField;
 
