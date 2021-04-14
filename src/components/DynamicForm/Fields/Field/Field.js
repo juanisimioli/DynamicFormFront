@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import useMedia from "use-media";
 
 import { Context } from "../../FormStore";
 import { useContext } from "react";
 import { errorMessage } from "../../helper/checkErrorField";
+import useWindowWidth from "../../../hooks/useWindowWidth";
 
 import InputField from "../InputField/InputField";
 import SelectField from "../SelectField/SelectField";
@@ -15,7 +15,7 @@ import style from "./field.module.scss";
 
 const Field = ({ item, className }) => {
   const { label, isRequired, isHalfSizeOnDektop } = item;
-  const isMobile = useMedia({ minWidth: 768 });
+  const isDesktopWidth = useWindowWidth(768);
   const [state] = useContext(Context);
 
   const textError = errorMessage(item, state);
@@ -37,7 +37,7 @@ const Field = ({ item, className }) => {
     <div
       className={classNames(
         style.container,
-        isMobile && isHalfSizeOnDektop && style.isHalfSizeOnDektop,
+        isDesktopWidth && isHalfSizeOnDektop && style.isHalfSizeOnDektop,
         className,
         style[state.theme]
       )}
