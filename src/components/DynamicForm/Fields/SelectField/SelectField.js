@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import Select from "react-select";
 
 import { Context } from "../../FormStore";
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 
 import { lightSelect, darkSelect } from "./stylesSelect";
 

@@ -50,8 +50,6 @@ function buildCheckboxField(item) {
 const ItemsForm = ({ fields, onSuccessSubmit, submitTitle, titleForm }) => {
   const [state, dispatch] = useContext(Context);
 
-  console.log(state);
-
   const recaptchaRef = useRef();
 
   const isReadyToSubmit = () => {
