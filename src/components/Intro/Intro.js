@@ -15,18 +15,18 @@ const Intro = () => {
         Front End React App was deployed to AWS Amplify.
       </p>
       <p>
-        Here you can see{" "}
+        👉{" "}
         <a href="https://github.com/juanisimioli/DynamicFormFront">
           Front End Github Repo
         </a>
         <br />
-        Here you can see{" "}
+        👉{" "}
         <a href="https://github.com/juanisimioli/DynamicFormBackLambda">
           Back End Github Repo
         </a>
       </p>
       <p>
-        ALL the code from this application was made by Juan Ignacio Simioli.{" "}
+        ALL the code from this application was written by Juan Ignacio Simioli.{" "}
         <br />
         Any question or comment, just contact me:{" "}
         <a href="mailto:juanisimioli@gmail.com">juanisimioli@gmail.com</a>.
