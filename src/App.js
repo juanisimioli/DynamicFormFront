@@ -18,7 +18,6 @@ function App() {
   return (
     <>
       <Intro />
-      <button onClick={() => setIsModalOpen(!isModalOpen)}>TEST</button>
       <ModalSuccess isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
       <section>
         <DynamicForm
