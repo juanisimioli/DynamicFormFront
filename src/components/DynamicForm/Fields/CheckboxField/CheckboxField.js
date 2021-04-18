@@ -23,7 +23,7 @@ const CheckboxField = ({ item }) => {
             className={style.checkbox}
             onChange={(e) =>
               dispatch({
-                type: `UPDATE`,
+                type: "UPDATE_FIELD",
                 payload: { [slug]: e.target.checked },
               })
             }

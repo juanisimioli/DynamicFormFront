@@ -23,7 +23,10 @@ const TextareaField = ({ item, error }) => {
         placeholder={item.placeholder}
         value={state[item.slug]}
         onChange={(e) =>
-          dispatch({ type: `UPDATE`, payload: { [item.slug]: e.target.value } })
+          dispatch({
+            type: "UPDATE_FIELD",
+            payload: { [item.slug]: e.target.value },
+          })
         }
         onBlur={() => dispatch({ type: "ADD_DIRTY_FIELD", payload: item.slug })}
         // onFocus allow to position the cursor at the end of the string inside input field

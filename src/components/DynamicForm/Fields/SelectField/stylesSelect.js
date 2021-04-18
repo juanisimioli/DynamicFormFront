@@ -4,7 +4,6 @@ const skyBlueColor = "#0af";
 const seaGreenColor = "#1abc9c";
 const greyColor = "#999999";
 const darkGrey = "#555555";
-const lightGrey = "#ccc";
 const blueishColor = "#f5f7fa";
 
 export const lightSelect = (error) => ({

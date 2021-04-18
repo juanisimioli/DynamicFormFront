@@ -28,7 +28,7 @@ const SelectField = ({ item, error }) => {
       onBlur={() => dispatch({ type: "ADD_DIRTY_FIELD", payload: item.slug })}
       onChange={(selected) =>
         dispatch({
-          type: `UPDATE`,
+          type: "UPDATE_FIELD",
           payload: {
             [item.slug]: { label: selected.label, value: selected.value },
           },

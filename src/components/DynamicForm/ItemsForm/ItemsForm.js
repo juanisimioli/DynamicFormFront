@@ -47,6 +47,12 @@ function buildCheckboxField(item) {
   return <CheckboxField key={item.id} item={item} />;
 }
 
+function resetFieldType(type, value) {
+  return Array.from(document.querySelectorAll(type)).forEach(
+    (input) => (input[value] = "")
+  );
+}
+
 const ItemsForm = ({ fields, onSuccessSubmit, submitTitle, titleForm }) => {
   const [state, dispatch] = useContext(Context);
 
@@ -113,19 +119,9 @@ const ItemsForm = ({ fields, onSuccessSubmit, submitTitle, titleForm }) => {
   const resetFields = () => {
     recaptchaRef.current.reset();
 
-    Array.from(
-      document.querySelectorAll(`input[idform="${state.idForm}"]`)
-    ).forEach((input) => (input.value = ""));
-
-    Array.from(
-      document.querySelectorAll(
-        `input[type=checkbox][idform="${state.idForm}"]`
-      )
-    ).forEach((input) => (input.checked = ""));
-
-    Array.from(
-      document.querySelectorAll(`textarea[idform="${state.idForm}"]`)
-    ).forEach((input) => (input.value = ""));
+    resetFieldType(`input[idform="${state.idForm}"]`, "value");
+    resetFieldType(`input[type=checkbox][idform="${state.idForm}"]`, "checked");
+    resetFieldType(`textarea[idform="${state.idForm}"]`, "value");
 
     const newState = initialState(fields, state.theme);
     dispatch({ type: "RESET_FIELDS", payload: newState });

@@ -16,14 +16,20 @@ const FileField = ({ item }) => {
   const [state, dispatch] = useContext(Context);
 
   const handleChange = (e) => {
-    dispatch({ type: `UPDATE`, payload: { [item.slug]: [...e.target.files] } });
+    dispatch({
+      type: "UPDATE_FIELD",
+      payload: { [item.slug]: [...e.target.files] },
+    });
   };
 
   const handleRemoveFile = (e, index) => {
     e.preventDefault();
     const newPayload = [...state[item.slug]];
     newPayload.splice(index, 1);
-    dispatch({ type: `UPDATE`, payload: { [item.slug]: [...newPayload] } });
+    dispatch({
+      type: "UPDATE_FIELD",
+      payload: { [item.slug]: [...newPayload] },
+    });
 
     Array.from(
       document.querySelectorAll(`input[idinput="${item.id}"]`)
