@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { Context } from "../../FormStore";
 
 import { errorMessage } from "../../helper/checkErrorField";
@@ -14,6 +14,12 @@ import style from "./fileField.module.scss";
 const FileField = ({ item }) => {
   const { text, description, accept } = item;
   const [state, dispatch] = useContext(Context);
+
+  const inputFileRef = useRef();
+
+  function clearValue() {
+    inputFileRef.current.value = "";
+  }
 
   const handleChange = (e) => {
     dispatch({
@@ -30,10 +36,6 @@ const FileField = ({ item }) => {
       type: "UPDATE_FIELD",
       payload: { [item.slug]: [...newPayload] },
     });
-
-    Array.from(
-      document.querySelectorAll(`input[idinput="${item.id}"]`)
-    ).forEach((input) => (input.value = ""));
   };
 
   const textError = errorMessage(item, state);
@@ -46,8 +48,8 @@ const FileField = ({ item }) => {
             type="file"
             accept={accept}
             onChange={(e) => handleChange(e)}
-            idform={state.idForm}
-            idinput={item.id}
+            ref={inputFileRef}
+            onClick={clearValue}
           />
           {text}
         </label>

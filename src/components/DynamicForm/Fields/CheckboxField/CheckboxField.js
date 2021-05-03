@@ -27,8 +27,7 @@ const CheckboxField = ({ item }) => {
                 payload: { [slug]: e.target.checked },
               })
             }
-            defaultChecked={item.default}
-            idform={state.idForm}
+            checked={state[item.slug]}
           />
         </label>
         <div

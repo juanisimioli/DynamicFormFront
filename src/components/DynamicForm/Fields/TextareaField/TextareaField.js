@@ -29,13 +29,6 @@ const TextareaField = ({ item, error }) => {
           })
         }
         onBlur={() => dispatch({ type: "ADD_DIRTY_FIELD", payload: item.slug })}
-        // onFocus allow to position the cursor at the end of the string inside input field
-        onFocus={function (e) {
-          var val = e.target.value;
-          e.target.value = "";
-          e.target.value = val;
-        }}
-        idform={state.idForm}
       />
       <CircleErrorInput error={error} />
     </>

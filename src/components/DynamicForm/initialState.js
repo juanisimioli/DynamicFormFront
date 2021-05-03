@@ -1,10 +1,10 @@
-import { v4 as uuidv4 } from "uuid";
-
 export const initialState = (fields, theme) =>
   fields?.reduce(
     (obj, field) => {
+      let defaultValue = field.default ?? (field.type === "file" ? [] : "");
+
       if (field.slug) {
-        obj[field.slug] = field.default;
+        obj[field.slug] = defaultValue;
       }
       return obj;
     },
@@ -15,6 +15,5 @@ export const initialState = (fields, theme) =>
       isSubmiting: false,
       errorSubmitting: "",
       theme,
-      idForm: uuidv4(),
     }
   );
