@@ -148,7 +148,7 @@ export const fieldsForm2 = [
     text: "Upload File",
     label: "File",
     slug: "upload-file",
-    description: "Only .pdf, .doc and .docx are allowed. Max file size 5MB.",
+    description: "Only .pdf, .doc and .docx are allowed. Max file size 5 MB.",
     isRequired: true,
   },
 ];
